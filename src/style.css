@@ -27,11 +27,11 @@ html[dir="ltr"] body {
 }
 
 body {
-   @apply  rtl:font-stc ltr:font-helvetica;
+   @apply  rtl:font-stc ltr:font-helvetica ;
 }
 
 .header {
-  @apply p-6 lg:px-8  lg:pt-14 flex flex-row justify-between items-center h-[60px] lg:h-[100px] lg:absolute lg:w-full lg:z-[9999] lg:overflow-hidden ;
+  @apply p-6 lg:px-8 relative flex  overflow-hidden  lg:pt-14  flex-row justify-between items-center h-[60px] lg:h-[100px] lg:absolute lg:w-full lg:z-[9999]  transition-all duration-300;
 }
 
 
@@ -74,7 +74,7 @@ body {
 }
 
 .main-nav {
-  @apply flex fixed w-[60%] drop-shadow-md h-screen bg-white lg:bg-transparent z-[1000] flex-col lg:flex-row gap-8 rtl:font-stc ltr:font-helvetica lg:relative p-4 lg:p-0 top-0 ltr:right-0 rtl:left-0 lg:w-auto lg:h-auto lg:left-auto lg:right-auto lg:justify-center lg:drop-shadow-none lg:translate-x-0 -translate-x-full transition-all ease-linear duration-300
+  @apply flex fixed w-[70%] drop-shadow-md h-screen bg-white lg:bg-transparent z-[1000] flex-col lg:flex-row gap-8 rtl:font-stc ltr:font-helvetica lg:relative p-8 lg:p-0 top-0 ltr:right-0 rtl:left-0 lg:w-auto lg:h-auto lg:left-auto lg:right-auto lg:justify-center lg:drop-shadow-none lg:translate-x-0 -translate-x-full transition-all ease-linear duration-300
 }
 
 
@@ -124,15 +124,15 @@ body {
 .hero {
       background: -webkit-linear-gradient(left, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
     background: linear-gradient(90deg, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
-       @apply lg:pt-[250px] lg:pb-[100px] py-[50px]
+       @apply lg:pt-[250px] lg:pb-[100px] py-[50px] relative 
 }
 
 .main-btn {
-  @apply max-w-[160px] bg-primary text-white px-3 py-3 text-center rounded-2xl  relative overflow-hidden flex justify-center items-center before:content-[''] before:w-full before:h-full  before:-translate-x-full before:absolute before:bg-white/10 before:z-10  hover:before:translate-x-0 before:transition-transform before:duration-300 before:ease-linear
+  @apply max-w-[160px] bg-primary text-white px-3 py-3 text-center rounded-2xl z-20  relative overflow-hidden flex justify-center items-center before:content-[''] before:w-full before:h-full  before:-translate-x-full before:absolute before:bg-white/10 before:z-[10]  hover:before:translate-x-0 before:transition-transform before:duration-300 before:ease-linear
 }
 
 .back-to-top {
-  @apply fixed scale-50 -bottom-5 rtl:left-8 ltr:right-8 z-[99] rounded-full bg-primary cursor-pointer w-[54px] h-[54px] text-white transition-all  flex justify-center items-center [&>i]:hover:mb-2 ease-linear duration-150 opacity-0 shadow-lg ;
+  @apply fixed scale-50 -bottom-5 rtl:left-8 ltr:right-8 z-[1000] rounded-full bg-primary cursor-pointer w-[54px] h-[54px] text-white transition-all  flex justify-center items-center [&>i]:hover:mb-2 ease-linear duration-150 opacity-0 shadow-lg ;
 }
 
 .show-back {
@@ -160,10 +160,15 @@ body {
   @apply  text-[#99a1aa] hover:text-primary transition-all ease-in-out text-xl
 }
 
+.service-main {
+  @apply relative overflow-hidden py-[100px] lg:py-[200px];
+}
 
 .card-service {
   @apply rounded-xl drop-shadow-xl relative overflow-hidden bg-white
 }
+
+
 
 .card-img {
   @apply  max-h-[300px] 
@@ -200,7 +205,7 @@ body {
 
 /* start why-yourevent */
 .why-yourevent {
-  @apply py-[100px] lg:py-[200px] bg-primary relative z-[1000]
+  @apply py-[100px] lg:py-[200px] bg-primary relative z-[1000] overflow-hidden
 }
 
 .shape-group-2 .shape-1 {
@@ -236,6 +241,10 @@ body {
 
 /* start question */
 
+.question {
+   @apply  py-[100px] lg:py-[200px] relative bg-[#ecf2f6] z-40 relative overflow-hidden
+}
+
 .shape-group-6 .shape.shape-1 {
    @apply top-0 rtl:left-0 rtl:right-auto  z-[33]
 }
@@ -264,12 +273,10 @@ body {
     @apply top-[42px] left-0 rotate-y-180
 }
 
-/* .customer-img {
-  @apply sepia hover:sepia-0
-} */
+
 
 .speed-contact-btn {
-  @apply w-[54px] h-[54px] rounded-full flex justify-center items-center bg-gradient-to-b from-primary to-primary/50 fixed bottom-5 rtl:right-4 ltr:left-4 z-[1000] shadow-xl
+  @apply w-[54px] h-[54px] rounded-full flex justify-center items-center bg-gradient-to-b from-primary to-primary/50 fixed bottom-5 rtl:right-4 ltr:left-4 z-[1000] shadow-xl 
 }
 
 
@@ -321,4 +328,11 @@ body {
 
 .intro-contact {
   @apply relative z-10 overflow-hidden pt-[100px] lg:pt-[200px] min-h-[400px] bg-contact bg-no-repeat bg-center bg-cover after:absolute after:w-full after:h-full after:bg-[#292930cc] after:z-[-10] after:top-0 after:left-0
+}
+
+.label-form {
+  @apply  text-textGray block mb-2
+}
+.input-form {
+  @apply text-textGray  text-lg ring-1 ring-gray-300 transition-all duration-300  rounded-md w-full p-2 focus:outline-none focus:ring-0 focus:drop-shadow-xl hover:ring-0 hover:drop-shadow-xl
 }
