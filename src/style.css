@@ -1,0 +1,324 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "stc";
+  src: url("../assets/fonts/STC-Regular.ttf");
+}
+
+@font-face {
+  font-family: "helvetica";
+  src: url("../assets/fonts/Helvetica.ttf");
+}
+
+
+html {
+  @apply accent-primary rtl:font-stc ltr:font-helvetica scroll-smooth;
+}
+
+html[dir="rtl"] body {
+  @apply font-stc 
+}
+
+html[dir="ltr"] body {
+  @apply font-helvetica
+}
+
+body {
+   @apply  rtl:font-stc ltr:font-helvetica;
+}
+
+.header {
+  @apply p-6 lg:px-8  lg:pt-14 flex flex-row justify-between items-center h-[60px] lg:h-[100px] lg:absolute lg:w-full lg:z-[9999] lg:overflow-hidden ;
+}
+
+
+
+.action-header_btn {
+  @apply bg-white w-14 h-14 rounded-full p-5 flex flex-col items-start justify-center  gap-1
+  [&>span:first-child]:hover:w-[10px] 
+  [&>span:last-child]:hover:w-[20px]; 
+}
+
+.action-header_btn>span {
+  @apply h-[2px] w-[20px] bg-[#364354]  rounded-[10px] block transition-all [&:last-child]:w-[10px];
+}
+
+.action-header__content  {
+  @apply px-20 py-10 text-textGray mb-6 ltr:font-helvetica rtl:font-stc;
+}
+.social {
+  @apply py-5 px-20 text-textGray mb-6 ltr:font-helvetica rtl:font-stc
+}
+
+.social  p {
+  @apply py-4 ltr:font-helvetica rtl:font-stc
+}
+
+.social .social-link {
+  @apply w-[20px] h-[20px] rounded-full flex justify-center items-center text-white bg-primary p-4
+}
+
+.header-logo {
+  @apply h-[80px] lg:h-[inherit]
+}
+
+.header-logo a {
+  @apply h-full block
+}
+
+.header-logo img {
+  @apply h-[inherit] 
+}
+
+.main-nav {
+  @apply flex fixed w-[60%] drop-shadow-md h-screen bg-white lg:bg-transparent z-[1000] flex-col lg:flex-row gap-8 rtl:font-stc ltr:font-helvetica lg:relative p-4 lg:p-0 top-0 ltr:right-0 rtl:left-0 lg:w-auto lg:h-auto lg:left-auto lg:right-auto lg:justify-center lg:drop-shadow-none lg:translate-x-0 -translate-x-full transition-all ease-linear duration-300
+}
+
+
+
+.open-mobile {
+  @apply translate-x-0
+}
+.close-nav-mobile {
+  @apply -translate-x-full
+}
+
+.overlay {
+  @apply block lg:hidden fixed bg-slate-900/50  h-full w-full top-0 left-0 z-[100] backdrop:bg-slate-900 backdrop:backdrop-blur-md transition-all ease-in-out
+}
+
+.main-nav .nav-item {
+  @apply text-xl text-textGray
+}
+
+.aside {
+  @apply w-[40vw] bg-white fixed shadow-xl top-0 h-screen ltr:left-0 rtl:right-0 z-[1001] translate-x-full transition-all ease-linear duration-300
+}
+
+.overlay-aside {
+  @apply hidden lg:block fixed bg-slate-900/50  h-full w-full top-0 left-0 z-[1001] backdrop:bg-slate-900 backdrop:backdrop-blur-md transition-all ease-in-out
+}
+
+.c-open-aside {
+  @apply translate-x-0
+}
+.c-close-aside {
+  @apply translate-x-full
+}
+
+.main-nav .nav-item .nav-link:not(.lang,.close) {
+  @apply relative transition-all  ease-linear after:h-[2px] after:w-0 after:ltr:left-0 after:rtl:right-0 after:bg-primary after:bottom-0 after:opacity-0  after:content-[''] after:absolute
+   hover:after:w-full hover:after:opacity-100 after:transition-[0.5s] after:ease-linear 
+}
+
+.main-nav .nav-item >.nav-link.lang {
+  @apply bg-primary text-white transition-all ease-in-out duration-150 rounded-full  text-[13px] p-1 border-[1px] border-transparent hover:bg-transparent hover:border-primary hover:text-primary
+}
+
+
+
+/* start hero */
+.hero {
+      background: -webkit-linear-gradient(left, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
+    background: linear-gradient(90deg, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
+       @apply lg:pt-[250px] lg:pb-[100px] py-[50px]
+}
+
+.main-btn {
+  @apply max-w-[160px] bg-primary text-white px-3 py-3 text-center rounded-2xl  relative overflow-hidden flex justify-center items-center before:content-[''] before:w-full before:h-full  before:-translate-x-full before:absolute before:bg-white/10 before:z-10  hover:before:translate-x-0 before:transition-transform before:duration-300 before:ease-linear
+}
+
+.back-to-top {
+  @apply fixed scale-50 -bottom-5 rtl:left-8 ltr:right-8 z-[99] rounded-full bg-primary cursor-pointer w-[54px] h-[54px] text-white transition-all  flex justify-center items-center [&>i]:hover:mb-2 ease-linear duration-150 opacity-0 shadow-lg ;
+}
+
+.show-back {
+  @apply bottom-5 opacity-100 scale-100
+}
+
+.back-to-top i {
+  @apply transition-all ease-linear duration-150;
+}
+
+.shape {
+  @apply absolute -z-[1]
+}
+
+.shape-1 {
+  @apply    top-0 rtl:right-0 ltr:left-0 rtl:text-right ltr:text-left
+}
+
+.shape-2 {
+  @apply top-[145px] rtl:right-0 ltr:left-0 
+
+}
+
+.hero .social-link {
+  @apply  text-[#99a1aa] hover:text-primary transition-all ease-in-out text-xl
+}
+
+
+.card-service {
+  @apply rounded-xl drop-shadow-xl relative overflow-hidden bg-white
+}
+
+.card-img {
+  @apply  max-h-[300px] 
+}
+
+.card-img img {
+  @apply scale-100 transition-transform ease-in-out hover:scale-105 duration-300 
+}
+
+.card-content {
+  @apply  p-4 flex flex-col gap-4
+}
+
+.card-content .card-title {
+  @apply  text-xl lg:text-3xl hover:text-primary pt-4
+}
+
+.card-content .card-text {
+  @apply  text-textGray
+}
+
+.card-content .card-link {
+  @apply  text-textGray flex hover:text-primary
+}
+
+.card-content  .line {
+  @apply   transition-all ease-linear  h-[1px] w-[0] bg-primary block opacity-0
+}
+
+.card-content .card-link:hover + .line {
+  @apply  opacity-100 !w-[50px] text-primary
+}
+
+
+/* start why-yourevent */
+.why-yourevent {
+  @apply py-[100px] lg:py-[200px] bg-primary relative z-[1000]
+}
+
+.shape-group-2 .shape-1 {
+  @apply top-0 scale-90 rtl:right-[-520px] ltr:left-[-520px] -z-10
+}
+
+.why-card {
+  @apply flex flex-col gap-6 justify-center items-center transition-all
+}
+
+
+
+.why-number {
+      background: -webkit-linear-gradient(90deg, #6181aa 0%, rgba(39, 39, 46, 0) 70.31%);
+    background: linear-gradient(90deg, #6181aa 0%, rgba(39, 39, 46, 0) 70.31%);
+  @apply h-[80px] w-[80px] rounded-full text-center leading-[80px] transition-all text-white ease-in-out duration-300
+}
+
+.why-card:hover > .why-number {
+  @apply bg-[#6181aa]
+}
+.why-title {
+  @apply text-xl lg:text-3xl text-white 
+}
+
+.why-text {
+  @apply text-lg text-[#d3d4d6] text-center transition-all ease-in-out
+}
+
+.why-card:hover > .why-text {
+  @apply text-white
+}
+
+/* start question */
+
+.shape-group-6 .shape.shape-1 {
+   @apply top-0 rtl:left-0 rtl:right-auto  z-[33]
+}
+
+.shape-group-6 .shape.shape-2 {
+    @apply top-[110px] rtl:left-0 ltr:right-0 z-[33]
+}
+
+.accordion-content {
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+.accordion-header {
+  @apply cursor-pointer transition flex justify-between px-5 items-center h-16 
+}
+
+.accordion-title {
+  @apply w-[50px] h-[50px] p-2 rounded-lg bg-white flex justify-center items-center
+}
+
+.accordion-content {
+  @apply px-5 pt-8 overflow-hidden max-h-0 hidden
+}
+
+.customer .shape-group-2 .shape.shape-1 {
+    @apply top-[42px] left-0 rotate-y-180
+}
+
+/* .customer-img {
+  @apply sepia hover:sepia-0
+} */
+
+.speed-contact-btn {
+  @apply w-[54px] h-[54px] rounded-full flex justify-center items-center bg-gradient-to-b from-primary to-primary/50 fixed bottom-5 rtl:right-4 ltr:left-4 z-[1000] shadow-xl
+}
+
+
+.speed-contact-body {
+  @apply transition-all duration-300 ease-in-out 
+}
+
+.c-one,
+.c-two {
+  @apply w-[54px] h-[54px] rounded-full flex justify-center items-center bg-white fixed bottom-20 rtl:right-4 ltr:left-4 z-[1000] shadow-xl transition-all duration-300 delay-75
+}
+
+.c-two {
+  @apply rtl:right-20 ltr:left-20 bottom-12 delay-300
+}
+
+
+/* contact */
+.contact-header  {
+  @apply bg-transparent absolute w-full top-6 lg:top-0  z-50
+}
+
+.contact-header .nav-link {
+  @apply lg:text-white lg:after:!bg-white 
+}
+
+.fixed-header {
+  @apply h-[80px] !fixed w-full bg-white text-textGray z-[10000] top-0 pt-8 shadow-sm
+}
+
+.fixed-header .action-header_btn {
+  @apply bg-primary
+}
+
+.fixed-header .action-header_btn span {
+  @apply bg-white
+}
+
+
+.fixed-header .nav-link.lang {
+  @apply !text-white hover:!text-textGray
+}
+
+
+.fixed-header .nav-link {
+  @apply !text-textGray after:!bg-primary
+}
+
+
+.intro-contact {
+  @apply relative z-10 overflow-hidden pt-[100px] lg:pt-[200px] min-h-[400px] bg-contact bg-no-repeat bg-center bg-cover after:absolute after:w-full after:h-full after:bg-[#292930cc] after:z-[-10] after:top-0 after:left-0
+}

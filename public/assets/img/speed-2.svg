@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="closeIcon" transform="translate(12 12)">
+    <g id="close" transform="translate(-12 -12)">
+      <g id="close-2" data-name="close">
+        <rect id="Rectangle_19" data-name="Rectangle 19" width="36" height="36" transform="translate(36 36) rotate(180)" fill="#fff" opacity="0"/>
+        <path id="Path_16" data-name="Path 16" d="M20.819,18l8.6-8.576a2.007,2.007,0,1,0-2.839-2.839L18,15.18l-8.576-8.6A2.007,2.007,0,0,0,6.586,9.423L15.181,18l-8.6,8.576a2.007,2.007,0,1,0,2.839,2.839L18,20.818l8.576,8.6a2.007,2.007,0,1,0,2.839-2.839Z" transform="translate(0 0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
