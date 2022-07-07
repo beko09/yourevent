@@ -132,12 +132,12 @@ const customer = new Swiper(".customer", {
 
   breakpoints: {
     640: {
-      slidesPerView: 3,
-      spaceBetween: 10,
+      slidesPerView: 2,
+      spaceBetween: 20,
       centeredSlides: true,
     },
     768: {
-      slidesPerView: 4,
+      slidesPerView: 2,
       spaceBetween: 20,
       centeredSlides: true,
     },

@@ -171,7 +171,7 @@ body {
 
 
 .card-img {
-  @apply  max-h-[300px] 
+  @apply  max-h-[300px] h-[inherit] overflow-hidden
 }
 
 .card-img img {
