@@ -25,13 +25,18 @@ html[dir="rtl"] body {
 html[dir="ltr"] body {
   @apply font-helvetica
 }
+html[dir="rtl"] .intro-slider {
+  direction: rtl;
+}
 
 body {
    @apply  rtl:font-stc ltr:font-helvetica ;
 }
 
+/* start header */
+
 .header {
-  @apply p-6 lg:px-8 relative flex  overflow-hidden  lg:pt-14  flex-row justify-between items-center h-[60px] lg:h-[100px] lg:absolute lg:w-full lg:z-[9999]  transition-all duration-300;
+  @apply p-6 lg:px-8 relative bg-white flex  overflow-hidden  lg:py-10 flex-row justify-between items-center lg:absolute lg:w-full lg:z-[9999]  transition-all duration-300 w-full h-[60px]  ;
 }
 
 
@@ -74,7 +79,7 @@ body {
 }
 
 .main-nav {
-  @apply flex fixed w-[70%] drop-shadow-md h-screen bg-white lg:bg-transparent z-[1000] flex-col lg:flex-row gap-8 rtl:font-stc ltr:font-helvetica lg:relative p-8 lg:p-0 top-0 ltr:right-0 rtl:left-0 lg:w-auto lg:h-auto lg:left-auto lg:right-auto lg:justify-center lg:drop-shadow-none lg:translate-x-0 -translate-x-full transition-all ease-linear duration-300
+  @apply flex fixed w-[70%] drop-shadow-md h-screen bg-white lg:bg-transparent z-[1000] flex-col lg:flex-row gap-8 rtl:font-stc ltr:font-helvetica lg:relative p-8 lg:p-0 top-0 ltr:right-0 rtl:left-0 lg:w-auto lg:h-auto lg:left-auto lg:right-auto lg:justify-center lg:drop-shadow-none lg:translate-x-0 -translate-x-full transition-all ease-linear duration-300 overflow-auto lg:overflow-visible
 }
 
 
@@ -95,7 +100,7 @@ body {
 }
 
 .aside {
-  @apply w-[40vw] bg-white fixed shadow-xl top-0 h-screen ltr:left-0 rtl:right-0 z-[1001] translate-x-full transition-all ease-linear duration-300
+  @apply w-[40vw] bg-white fixed shadow-xl top-0 h-screen ltr:left-0 rtl:right-0 z-[1001] rtl:translate-x-full ltr:-translate-x-full transition-all ease-linear duration-300
 }
 
 .overlay-aside {
@@ -103,10 +108,10 @@ body {
 }
 
 .c-open-aside {
-  @apply translate-x-0
+  @apply rtl:translate-x-0 ltr:translate-x-0
 }
 .c-close-aside {
-  @apply translate-x-full
+  @apply rtl:translate-x-full ltr:-translate-x-full
 }
 
 .main-nav .nav-item .nav-link:not(.lang,.close) {
@@ -114,10 +119,39 @@ body {
    hover:after:w-full hover:after:opacity-100 after:transition-[0.5s] after:ease-linear 
 }
 
+.main-nav .nav-item .nav-link.active {
+  @apply text-primary 
+}
+
 .main-nav .nav-item >.nav-link.lang {
   @apply bg-primary text-white transition-all ease-in-out duration-150 rounded-full  text-[13px] p-1 border-[1px] border-transparent hover:bg-transparent hover:border-primary hover:text-primary
 }
 
+/*  start intro */
+.intro {
+       @apply relative z-40 h-screen lg:top-[80px]
+}
+
+.intro-slider {
+  @apply relative  z-40 h-screen  w-full }
+
+.intro-img {
+  @apply absolute w-full h-full z-20  after:absolute after:w-full after:h-full after:bg-black/50 after:z-10 after:top-0 after:left-0
+
+}
+
+.intro-img img {
+  @apply absolute w-full h-full after:absolute after:w-full after:h-full after:bg-black/50 after:z-10 after:top-0 after:left-0
+
+}
+
+.intro-content {
+  @apply absolute z-50 w-1/2 top-1/3 rtl:right-[10%] ltr:left-[10%]
+}
+
+.intro-title  {
+  @apply text-2xl lg:text-5xl text-white font-stc pb-8
+}
 
 
 /* start hero */
@@ -161,29 +195,29 @@ body {
 }
 
 .service-main {
-  @apply relative overflow-hidden py-[100px] lg:py-[200px];
+  @apply relative overflow-hidden py-[100px] lg:pt-[200px];
 }
 
 .card-service {
-  @apply rounded-xl drop-shadow-xl relative overflow-hidden bg-white
+      background: -webkit-linear-gradient(top, #F8F8F8 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, #F8F8F8 0%, rgba(255, 255, 255, 0) 100%);
+  @apply rounded-xl transition-all ease-in-out  relative overflow-hidden bg-white hover:bg-[#ecf2f6]
 }
 
-
-
-.card-img {
-  @apply  max-h-[300px] h-[inherit] overflow-hidden
+.card-img  {
+  @apply flex justify-center items-center 
 }
 
 .card-img img {
-  @apply scale-100 transition-transform ease-in-out hover:scale-105 duration-300 
+  @apply w-[200px] h-[180px]
 }
 
 .card-content {
-  @apply  p-4 flex flex-col gap-4
+  @apply  px-4 flex flex-col gap-4
 }
 
 .card-content .card-title {
-  @apply  text-xl lg:text-3xl hover:text-primary pt-4
+  @apply  text-xl hover:text-primary pt-4 rtl:font-stc ltr:font-helvetica font-bold
 }
 
 .card-content .card-text {
@@ -191,7 +225,7 @@ body {
 }
 
 .card-content .card-link {
-  @apply  text-textGray flex hover:text-primary
+  @apply  text-textGray flex hover:text-primary text-xl
 }
 
 .card-content  .line {
@@ -274,37 +308,19 @@ body {
 }
 
 
-
-.speed-contact-btn {
-  @apply w-[54px] h-[54px] rounded-full flex justify-center items-center bg-gradient-to-b from-primary to-primary/50 fixed bottom-5 rtl:right-4 ltr:left-4 z-[1000] shadow-xl 
+.whatsapp-contact {
+  @apply fixed bottom-5 rtl:right-5 ltr:left-5 z-[1000] w-[50px] h-[50px] rounded-full bg-green-500 text-white flex justify-center items-center
 }
 
-
-.speed-contact-body {
-  @apply transition-all duration-300 ease-in-out 
+.whatsapp-contact i {
+  @apply text-3xl text-white
 }
-
-.c-one,
-.c-two {
-  @apply w-[54px] h-[54px] rounded-full flex justify-center items-center bg-white fixed bottom-20 rtl:right-4 ltr:left-4 z-[1000] shadow-xl transition-all duration-300 delay-75
-}
-
-.c-two {
-  @apply rtl:right-20 ltr:left-20 bottom-12 delay-300
-}
-
 
 /* contact */
-.contact-header  {
-  @apply bg-transparent absolute w-full top-6 lg:top-0  z-50
-}
 
-.contact-header .nav-link {
-  @apply lg:text-white lg:after:!bg-white 
-}
 
 .fixed-header {
-  @apply h-[80px] !fixed w-full bg-white text-textGray z-[10000] top-0 pt-8 shadow-sm
+  @apply h-[80px] !fixed w-full bg-white text-textGray z-[10000] top-0 pt-8 shadow-md
 }
 
 .fixed-header .action-header_btn {
@@ -326,13 +342,29 @@ body {
 }
 
 
-.intro-contact {
-  @apply relative z-10 overflow-hidden pt-[100px] lg:pt-[200px] min-h-[400px] bg-contact bg-no-repeat bg-center bg-cover after:absolute after:w-full after:h-full after:bg-[#292930cc] after:z-[-10] after:top-0 after:left-0
+.fixed-header .nav-link.active {
+  @apply !text-primary
 }
+
+
 
 .label-form {
   @apply  text-textGray block mb-2
 }
 .input-form {
   @apply text-textGray  text-lg ring-1 ring-gray-300 transition-all duration-300  rounded-md w-full p-2 focus:outline-none focus:ring-0 focus:drop-shadow-xl hover:ring-0 hover:drop-shadow-xl
+}
+
+/*  start tech solutions */
+
+.tech-cards .card-service {
+   @apply hover:bg-[#ecf2f6]
+}
+
+.tech-cards .card-img  {
+  @apply flex justify-start p-8 
+}
+
+.tech-cards .card-img  img {
+  @apply w-[100px] h-auto
 }
