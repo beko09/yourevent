@@ -1504,20 +1504,28 @@ html[dir="rtl"] .intro-slider {
 .intro {
   position: relative;
   z-index: 40;
-  height: 100vh;
+  height: 400px;
+  overflow: hidden;
 }
 
 @media (min-width: 1024px) {
   .intro {
     top: 80px;
+    height: 100vh;
   }
 }
 
 .intro-slider {
   position: relative;
   z-index: 40;
-  height: 100vh;
+  height: 100%;
   width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .intro-slider {
+    height: 100vh;
+  }
 }
 
 .intro-img {
@@ -1557,7 +1565,7 @@ html[dir="rtl"] .intro-slider {
 
 .intro-content {
   position: absolute;
-  top: 33.333333%;
+  top: 25%;
   z-index: 50;
   width: 50%;
 }
@@ -1570,8 +1578,13 @@ html[dir="rtl"] .intro-slider {
   right: 10%;
 }
 
+@media (min-width: 1024px) {
+  .intro-content {
+    top: 33.333333%;
+  }
+}
+
 .intro-title {
-  padding-bottom: 2rem;
   font-family: stc, sans-serif;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1581,6 +1594,7 @@ html[dir="rtl"] .intro-slider {
 
 @media (min-width: 1024px) {
   .intro-title {
+    padding-bottom: 2rem;
     font-size: 3rem;
     line-height: 1;
   }
@@ -2224,6 +2238,10 @@ html[dir="rtl"] .intro-slider {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:justify-start {
+    justify-content: flex-start;
   }
 
   .lg\:gap-12 {
