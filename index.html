@@ -17,8 +17,8 @@
 <body>
   <!-- start header -->
   <header class="header">
-    <div class="flex flex-row gap-12 items-center lg:w-auto w-full">
-      <div class="action-header hidden lg:block">
+    <div class="flex flex-row items-center w-full gap-12 lg:w-auto">
+      <div class="hidden action-header lg:block">
         <button class="action-header_btn open-aside">
           <span></span>
           <span></span>
@@ -26,7 +26,7 @@
         </button>
         <div class="over-aside"></div>
         <aside class=" aside" aria-label="Sidebar">
-          <button class="text-black/50 text-xl close-aside rtl:mr-auto block p-4">
+          <button class="block p-4 text-xl text-black/50 close-aside rtl:mr-auto">
             <i class="fa fa-times"></i>
           </button>
           <div class="action-header__content">
@@ -71,13 +71,16 @@
               <a class="social-link" href="#">
                 <i class="fab fa-youtube"></i>
               </a>
+              <a class="social-link" href="#">
+                <i class="fab fa-facebook"></i>
+              </a>
             </div>
           </div>
         </aside>
       </div>
       <nav class="w-full">
-        <div class="flex lg:hidden flex-row justify-between items-center">
-          <button class="action-header_btn block open-nav-mobile">
+        <div class="flex flex-row items-center justify-between lg:hidden">
+          <button class="block action-header_btn open-nav-mobile">
             <span></span>
             <span></span>
             <span></span>
@@ -91,7 +94,7 @@
         <div class="over"></div>
         <ul class="main-nav menu-mobile">
           <li
-            class="nav-item close-mobile cursor-pointer flex flex-row justify-between border-b-2 lg:border-b-0 pb-2 lg:pb-0 items-center  lg:hidden">
+            class="flex flex-row items-center justify-between pb-2 border-b-2 cursor-pointer nav-item close-mobile lg:border-b-0 lg:pb-0 lg:hidden">
             <button
               class="nav-link close  text-xl bg-primary w-[50px] h-[40px] py-2 flex justify-center items-center rounded-lg ">
               <i class="fas fa-times !text-white"></i>
@@ -102,8 +105,8 @@
               </a>
             </div>
           </li>
-          <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-          <li class="nav-item"><a class="nav-link" href="about">نبذة عنا</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+        
           <li class="nav-item"><a class="nav-link" href="our-services.html">خدماتنا</a></li>
           <li class="nav-item"><a class="nav-link" href="technical-solutions.html">الحلول التقنية</a></li>
           <li class="nav-item"><a class="nav-link" href="our-clients.html">عملائنا</a></li>
@@ -113,200 +116,146 @@
         </ul>
       </nav>
     </div>
-    <div class="header-logo hidden lg:flex">
+    <div class="hidden header-logo lg:flex">
       <a href="index.html">
         <img src="assets/img/logo.png" alt="YourEvent" />
       </a>
     </div>
   </header>
 
-  <!-- start hero -->
-  <section class="hero">
-    <div class="container mx-auto px-4 lg:px-20">
-      <div class="grid grid-cols-1 lg:grid-cols-3 place-content-center place-items-center">
-        <div class="flex flex-col gap-8 lg:gap-6">
-          <h1 class="text-6xl lg:text-7xl ltr:font-helvetica rtl:font-stc">
-            هنا يلتقي العالم ليصنع الحدث
-          </h1>
-
-          <a href="contact.html" class="main-btn mt-12 lg:mt-0">تواصل معنا</a>
+  <!-- start intro -->
+  <section class="intro">
+     <div class="intro-content">
+            <h1 class="intro-title"> اجعل حدثك مميز</h1>
+            <a href="contact.html" class="mt-12 main-btn lg:mt-0">تواصل معنا</a>
+     </div>
+     <div class="swiper intro-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide ">
+             <div class="intro-img">
+                <img src="assets/img/1.jpeg" alt="customer" />
+             </div>
+          </div>
+          <div class="swiper-slide ">
+            <div class="intro-img">
+                <img src="assets/img/2.jpg" alt="customer" />
+             </div>
+          </div>
+          <div class="swiper-slide ">
+             <div class="intro-img">
+                <img src="assets/img/3.jpeg" alt="customer" />
+             </div>
+          </div>
+          <div class="swiper-slide ">
+             <div class="intro-img">
+                <img src="assets/img/4.jpg" alt="customer" />
+             </div>
+          </div>
+          <div class="swiper-slide">
+             <div class="intro-img">
+                <img src="assets/img/5.jpg" alt="customer" />
+             </div>
+          </div>
+          <div class="swiper-slide ">
+             <div class="intro-img">
+                <img src="assets/img/6.jpg" alt="customer" />
+             </div>
+          </div>
         </div>
-        <div class="col-span-2 max-h-[300px] h-full relative overflow-hidden">
-          <img class="h-[inherit] max-w-full w-full rounded-lg drop-shadow-md" src="assets/img/logo.png" alt="logo" />
+        <div class="absolute z-50 flex flex-row items-center justify-center w-full gap-12 bottom-10">
+          <div class="swiper-intro-next">
+            <img src="assets/img/next-arrow.svg" alt="Next"/>
+          </div>
+          <div class="swiper-pagination text-white relative w-[auto]"></div>
+           <div class="swiper-intro-prev">
+             <img src="assets/img/prev-arrow.svg" alt="prev"/>
+           </div>
         </div>
-        <div class="flex flex-row gap-4 w-full pt-20">
-          <a class="social-link" href="#">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a class="social-link" href="#">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a class="social-link" href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a class="social-link" href="#">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </div>
+        
       </div>
-
-    </div>
-    <ul>
-      <li class="shape shape-1">
-        <img src="assets/img/bubble.png" alt="Bubble">
-      </li>
-      <li class="shape shape-2">
-        <img src="assets/img/line.png" style="transform: rotateY(180deg);" alt="Bubble">
-      </li>
-    </ul>
   </section>
 
   <!-- about yourevent -->
-  <section class=" service-main">
-    <div class="container px-4 lg:px-20 mx-auto">
+  <section class="service-main">
+    <div class="container px-4 mx-auto lg:px-20">
       <div class="pb-12">
         <h1 class="text-4xl lg:text-5xl ">
           عن
-          <span class="text-[#EB156E]">
+          <span class="text-primary">
             حدثك
           </span>
         </h1>
       </div>
-      <div class="w-full lg:w-[70%] mx-auto ">
+      <div class="w-full lg:w-[70%] mx-auto">
         <p class="text-xl text-textGray">
-          كافــة تقديــم فــي متخصصيــن قبــل مــن وادارتهــا الفعاليــات صناعــة فــي رائــدة ســعودية شــركة
-          المملكــة داخــل والفعاليــات والمؤتمــرات المعــارض ، وتســويق تنظيــم و تنفيــذ مــن الخدمــات
-          الى الفكــرة مــن ًابتــداء المؤثــرة الوطنيــة وكفاءتهــم شــبابنا بموهبــة خارجهــا و الســعودية العربيــة
-          كــوادر بوجــود ملمــوس واقــع الــى اهدافكــم وتحويــل ًـا طوي االذهــان فــي ليــدوم المبتكــر حدثــك
-          مشــاركاتهم بحكــم ،والتحــدي للشــغف الممتلكيــن، الخبــرة ذوي مــن موهوبــة وطنيــة وكفــاءات
-          لألبــل عبدالعزيــز الملــك مهرجــان مثــل الكبــرى الوطنيــة المناســبات مــن الكثيــر إدارة فــي الســابقة
-          .الوطنــي الجنادريــة ومهرجــان التاريخــي عــكاظ ومهرجــان
+          شركة سعودية رائدة في صناعة الفعاليات وإدارتها من قبل متخصصين في تقديم كافة الخدمات من تنفيذ و تنظيم وتسويق ، المعارض والمؤتمرات والفعاليات داخل المملكة العربية السعودية و خارجها بموهبة شبابنا وكفاءتهم الوطنية المؤثرة ابتداءً من الفكرة الى حدثك المبتكر ليدوم في الاذهان طويلاً وتحويل اهدافكم الى واقع ملموس بوجود كوادر وكفاءات وطنية موهوبة من ذوي الخبرة ،الممتلكين للشغف والتحدي، بحكم مشاركاتهم السابقة في إدارة الكثير من المناسبات الوطنية الكبرى مثل مهرجان الملك عبدالعزيز للأبل ومهرجان عكاظ التاريخي ومهرجان الجنادرية الوطني
         </p>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-8">
-        <div class="card-service">
-          <div class="card-img">
-            <img class="h-[inherit] w-full" src="assets/img/service.jpg" alt="service" />
-          </div>
-          <div class="card-content">
-            <h1 class="card-title">
-              والفعاليات والمؤتمرات المعارض وتسويق إدارة
+    </div>
+  </section>
+
+   <!-- start about-content -->
+  <section class="py-[100px]">
+    <div class="container px-4 mx-auto lg:px-20">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <div>
+          <img src="assets/img/vision.png" alt="about" />
+        </div>
+        <div>
+          <div>
+            <h1 class="text-xl text-primary lg:text-4xl">
+              رسالتنا
             </h1>
-            <p class="card-text">
-              مــن الــذي الهــدف وتحقــق مميــزة بصمــة ذات فعالياتكــم جعــل علــى حدثــك شــركة تهتــم
-              خطى ضمــن حدثــك شــركة فــي نعمــل المطلــب هــذا الــي وللوصــول ،الفعاليــة اقيمــت أجلــة
-              وأهدافــه العميــل رؤيــة مــع متزامنــة وواثقــة منظمــة
+            <p class="py-4 text-xl">
+              نسعى للتميز في تقديم خدماتنا وفق معايير عالمية لصناعة وإدارة الفعاليات وفريق عمل يتميز بالخبرة والاحترافية.
             </p>
-            <div class="flex flex-row gap-2 items-center">
-              <a href="contact.html" class="card-link">
-                مميز حدثك يجعل مما
-              </a>
-              <span class="line"></span>
-            </div>
+          </div>
+          <div class="pt-6">
+            <h1 class="text-xl text-primary lg:text-4xl">
+              رؤيــتــنا
+            </h1>
+            <p class="py-4 text-xl">أن نكون دائماً الخيار الأول في صناعة وإدارة الحدث لدى الجهات الخاصة والحكومية.
+            </p>
           </div>
         </div>
-        <div class="card-service">
-          <div class="card-img">
-            <img class="h-[inherit] w-full" src="assets/img/service.jpg" alt="service" />
-          </div>
-          <div class="card-content">
-            <h1 class="card-title">
-              والفعاليات والمؤتمرات المعارض وتسويق إدارة
-            </h1>
-            <p class="card-text">
-              مــن الــذي الهــدف وتحقــق مميــزة بصمــة ذات فعالياتكــم جعــل علــى حدثــك شــركة تهتــم
-              خطى ضمــن حدثــك شــركة فــي نعمــل المطلــب هــذا الــي وللوصــول ،الفعاليــة اقيمــت أجلــة
-              وأهدافــه العميــل رؤيــة مــع متزامنــة وواثقــة منظمــة
-            </p>
-            <div class="flex flex-row gap-2 items-center">
-              <a href="contact.html" class="card-link">
-                مميز حدثك يجعل مما
-              </a>
-              <span class="line"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- start rate us -->
+  <section class="py-[100px]">
+    <div class="container px-4 mx-auto lg:px-20">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <div>
+          <h1 class="text-xl lg:text-4xl text-c-title">قيمنا</h1>
+          <p class="pt-8 text-xl">
+            قيم رئيسية نلتزم بها ونؤمن بأهميتها لاستدامة التطور والنجاح 
+          </p>
+        </div>
+        <div class="flex flex-wrap col-span-2 gap-8">
+          <div class="flex flex-col gap-3 justify-center items-center bg-[#f2f5f7] p-4 rounded-2xl w-[200px]">
+            <div class="max-h-[100px] flex justify-center items-center">
+              <img class="h-auto" src="assets/img/A2.png" alt="rate us" />
             </div>
           </div>
-        </div>
-        <div class="card-service">
-          <div class="card-img">
-            <img class="h-[inherit] w-full" src="assets/img/service.jpg" alt="service" />
-          </div>
-          <div class="card-content">
-            <h1 class="card-title">
-              والفعاليات والمؤتمرات المعارض وتسويق إدارة
-            </h1>
-            <p class="card-text">
-              مــن الــذي الهــدف وتحقــق مميــزة بصمــة ذات فعالياتكــم جعــل علــى حدثــك شــركة تهتــم
-              خطى ضمــن حدثــك شــركة فــي نعمــل المطلــب هــذا الــي وللوصــول ،الفعاليــة اقيمــت أجلــة
-              وأهدافــه العميــل رؤيــة مــع متزامنــة وواثقــة منظمــة
-            </p>
-            <div class="flex flex-row gap-2 items-center">
-              <a href="contact.html" class="card-link">
-                مميز حدثك يجعل مما
-              </a>
-              <span class="line"></span>
+          <div class="flex flex-col gap-3 justify-center items-center bg-[#f2f5f7] p-4 rounded-2xl w-[200px]">
+            <div class="max-h-[100px] flex justify-center items-center">
+              <img class="h-auto" src="assets/img/A3.png" alt="rate us" />
             </div>
           </div>
-        </div>
-        <div class="card-service">
-          <div class="card-img">
-            <img class="h-[inherit] w-full" src="assets/img/service.jpg" alt="service" />
-          </div>
-          <div class="card-content">
-            <h1 class="card-title">
-              والفعاليات والمؤتمرات المعارض وتسويق إدارة
-            </h1>
-            <p class="card-text">
-              مــن الــذي الهــدف وتحقــق مميــزة بصمــة ذات فعالياتكــم جعــل علــى حدثــك شــركة تهتــم
-              خطى ضمــن حدثــك شــركة فــي نعمــل المطلــب هــذا الــي وللوصــول ،الفعاليــة اقيمــت أجلــة
-              وأهدافــه العميــل رؤيــة مــع متزامنــة وواثقــة منظمــة
-            </p>
-            <div class="flex flex-row gap-2 items-center">
-              <a href="contact.html" class="card-link">
-                مميز حدثك يجعل مما
-              </a>
-              <span class="line"></span>
+          <div class="flex flex-col gap-3 justify-center items-center bg-[#f2f5f7] p-4 rounded-2xl w-[200px]">
+            <div class="max-h-[100px] flex justify-center items-center">
+              <img class="h-auto" src="assets/img/A5.png" alt="rate us" />
             </div>
           </div>
-        </div>
-        <div class="card-service">
-          <div class="card-img">
-            <img class="h-[inherit] w-full" src="assets/img/service.jpg" alt="service" />
-          </div>
-          <div class="card-content">
-            <h1 class="card-title">
-              والفعاليات والمؤتمرات المعارض وتسويق إدارة
-            </h1>
-            <p class="card-text">
-              مــن الــذي الهــدف وتحقــق مميــزة بصمــة ذات فعالياتكــم جعــل علــى حدثــك شــركة تهتــم
-              خطى ضمــن حدثــك شــركة فــي نعمــل المطلــب هــذا الــي وللوصــول ،الفعاليــة اقيمــت أجلــة
-              وأهدافــه العميــل رؤيــة مــع متزامنــة وواثقــة منظمــة
-            </p>
-            <div class="flex flex-row gap-2 items-center">
-              <a href="contact.html" class="card-link">
-                مميز حدثك يجعل مما
-              </a>
-              <span class="line"></span>
+          <div class="flex flex-col gap-3 justify-center items-center bg-[#f2f5f7] p-4 rounded-2xl w-[200px]">
+            <div class="max-h-[100px] flex justify-center items-center">
+              <img class="h-auto" src="assets/img/A7.png" alt="rate us" />
             </div>
           </div>
-        </div>
-        <div class="card-service">
-          <div class="card-img">
-            <img class="h-[inherit] w-full" src="assets/img/service.jpg" alt="service" />
-          </div>
-          <div class="card-content">
-            <h1 class="card-title">
-              والفعاليات والمؤتمرات المعارض وتسويق إدارة
-            </h1>
-            <p class="card-text">
-              مــن الــذي الهــدف وتحقــق مميــزة بصمــة ذات فعالياتكــم جعــل علــى حدثــك شــركة تهتــم
-              خطى ضمــن حدثــك شــركة فــي نعمــل المطلــب هــذا الــي وللوصــول ،الفعاليــة اقيمــت أجلــة
-              وأهدافــه العميــل رؤيــة مــع متزامنــة وواثقــة منظمــة
-            </p>
-            <div class="flex flex-row gap-2 items-center">
-              <a href="contact.html" class="card-link">
-                مميز حدثك يجعل مما
-              </a>
-              <span class="line"></span>
+          <div class="flex flex-col gap-3 justify-center items-center bg-[#f2f5f7] p-4 rounded-2xl w-[200px]">
+            <div class="max-h-[100px] flex justify-center items-center">
+              <img class="h-auto" src="assets/img/A66.png" alt="rate us" />
             </div>
           </div>
         </div>
@@ -316,12 +265,12 @@
 
   <!-- stat why yourevent -->
   <section class="why-yourevent">
-    <div class="container px-4 lg:px-20 mx-auto">
+    <div class="container px-4 mx-auto lg:px-20">
       <div class="text-center">
-        <h6 class="text-center text-lg text-white pb-3"> لماذا حدثك ؟</h6>
-        <h1 class="text-xl lg:text-4xl text-white">لأجل فعالية استثنائية</h1>
+        <h6 class="pb-3 text-lg text-center text-white"> لماذا حدثك ؟</h6>
+        <h1 class="text-xl text-white lg:text-4xl">لأجل فعالية استثنائية</h1>
       </div>
-      <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 pt-4 lg:pt-32">
+      <div class="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-4 lg:pt-32">
         <div class="why-card">
           <h1 class="why-number">
             1
@@ -376,8 +325,8 @@
 
   <!-- start question -->
   <section class="question ">
-    <div class="container px-4 lg:px-20 mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-3 relative z-50">
+    <div class="container px-4 mx-auto lg:px-20">
+      <div class="relative z-50 grid grid-cols-1 lg:grid-cols-3">
         <div>
           <h1 class="text-2xl lg:text-4xl">
             الأسئلة الشائعة
@@ -387,10 +336,10 @@
           <div class="w-full rounded ">
             <div>
               <!-- Accordion Wrapper -->
-              <div class="transition rounded-md overflow-hidden">
+              <div class="overflow-hidden transition rounded-md">
                 <!-- header -->
                 <div class="accordion-header ">
-                  <div class="flex flex-row gap-3 items-center">
+                  <div class="flex flex-row items-center gap-3">
                     <div class="accordion-title">
                       <img class="h-[auto]" src="assets/img/question-mark.png" alt="question" />
                     </div>
@@ -410,10 +359,10 @@
                 </div>
               </div>
               <!-- Accordion Wrapper -->
-              <div class="transition rounded-md overflow-hidden">
+              <div class="overflow-hidden transition rounded-md">
                 <!-- header -->
                 <div class="accordion-header ">
-                  <div class="flex flex-row gap-3 items-center">
+                  <div class="flex flex-row items-center gap-3">
                     <div class="accordion-title">
                       <img class="h-[auto]" src="assets/img/question-mark.png" alt="question" />
                     </div>
@@ -432,10 +381,10 @@
                 </div>
               </div>
               <!-- Accordion Wrapper -->
-              <div class="transition rounded-md overflow-hidden">
+              <div class="overflow-hidden transition rounded-md">
                 <!-- header -->
                 <div class="accordion-header ">
-                  <div class="flex flex-row gap-3 items-center">
+                  <div class="flex flex-row items-center gap-3">
                     <div class="accordion-title">
                       <img class="h-[auto]" src="assets/img/question-mark.png" alt="question" />
                     </div>
@@ -454,10 +403,10 @@
                 </div>
               </div>
               <!-- Accordion Wrapper -->
-              <div class="transition rounded-md overflow-hidden">
+              <div class="overflow-hidden transition rounded-md">
                 <!-- header -->
                 <div class="accordion-header ">
-                  <div class="flex flex-row gap-3 items-center">
+                  <div class="flex flex-row items-center gap-3">
                     <div class="accordion-title">
                       <img class="h-[auto]" src="assets/img/question-mark.png" alt="question" />
                     </div>
@@ -492,9 +441,9 @@
 
   <!-- start customer -->
   <section class="customer py-[100px] lg:py-[200px] relative bg-primary z-40 overflow-hidden">
-    <div class="container mx-auto px-4 lg:px-20">
+    <div class="container px-4 mx-auto lg:px-20">
       <div class="mb-8">
-        <h1 class="text-2xl lg:text-5xl text-white">عملائنا</h1>
+        <h1 class="text-2xl text-white lg:text-5xl">عملائنا</h1>
         <p class="text-xl text-white">
           علامات تجارية ومؤسسات نفخر بها.. تشاركنا الرحلة ونشاركها النجاح
         </p>
@@ -541,15 +490,15 @@
 
   <!-- start footer -->
   <footer class="pt-[100px] lg:pt-[200px]">
-    <div class="container px-4 lg:px-20 mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 pb-10 lg:pb-20">
+    <div class="container px-4 mx-auto lg:px-20">
+      <div class="grid grid-cols-1 gap-4 pb-10 lg:grid-cols-2 lg:pb-20">
         <div
           class="border-textGray/20 lg:rtl:border-l-[1px] lg:ltr:border-r-[1px] border-b-[1px] mb-2 lg:mb-0 py-3 lg:py-0 lg:border-b-0">
           <a href="index.html" class="block h-[140px]">
             <img class="h-[inherit]" src="assets/img/logo.png" alt="yourevent" />
           </a>
           <p class="text-xl text-textGray">
-            بداية من الفكرة وصولًا إلى الإنتاج، إليك التجربة الأفضل لخلق فعالية استثنائية تدوم في الأذهان طويلًا مع وتن.
+          نسعى للتميز في تقديم خدماتنا وفق معايير عالمية لصناعة وإدارة الفعاليات وفريق عمل يتميز بالخبرة والاحترافية.
           </p>
         </div>
         <div class="grid grid-cols-2 gap-3">
@@ -559,8 +508,8 @@
             </h1>
             <ul class="flex flex-col gap-4 pt-6">
               <li><a class="text-textGray" href="index.html">الرئيسية</a></li>
-              <li><a class="text-textGray" href="about.html">نبذة عنا</a></li>
               <li><a class="text-textGray" href="our-services.html">خدماتنا</a></li>
+              <li><a class="text-textGray" href="our-clients.html">عملائنا </a></li>
               <li><a class="text-textGray" href="technical-solutions.html">الحلول التقنية</a></li>
             </ul>
           </div>
@@ -592,7 +541,7 @@
         </div>
       </div>
       <hr>
-      <div class="text-center py-8">
+      <div class="py-8 text-center">
         <p class="text-textGray">
           جميع الحقوق محفوظة ل<span class="text-primary ">حدثك</span>
           &copy;
@@ -603,29 +552,19 @@
       </div>
     </div>
   </footer>
+  
   <!-- start back-to-top -->
-  <button class="back-to-top">
+  <button class="back-to-top" aria-label="back to top">
     <i class="fas fa-angle-double-up"></i>
   </button>
 
-  <!-- start speed-contact -->
+  <!-- whatsapp-contact -->
 
-  <div class="speed-contact-btn">
-    <button class="open-speed"><img src="assets/img/speed-1.png" alt="speed-contact" /></button>
-    <button class="close-speed hidden"> <img src="assets/img/speed-2.svg" alt="speed-contact" /></button>
-  </div>
-  <div class="speed-contact-body opacity-0 invisible">
-    <div class="c-one">
-      <a href="tel:+9660112290972">
-        <img src="assets/img/contact-us-1.svg" alt="contact us" />
-      </a>
-    </div>
-    <div class="c-two">
-      <a href="https://wa.me/+9660112290972">
-        <img src="assets/img/whatsapp-svgrepo-com.png" alt="contact us" />
-      </a>
-    </div>
-  </div>
+  <a aria-label="whatsapp-contact" href="https://wa.me/+966556060776" class=" whatsapp-contact">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
