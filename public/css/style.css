@@ -627,11 +627,6 @@ video {
   margin-right: auto;
 }
 
-.my-\[100px\] {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -752,10 +747,6 @@ video {
   place-content: center;
 }
 
-.place-items-center {
-  place-items: center;
-}
-
 .items-center {
   align-items: center;
 }
@@ -776,12 +767,12 @@ video {
   gap: 1rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .gap-3 {
@@ -880,6 +871,11 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-\[100px\] {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -898,11 +894,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-\[100px\] {
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .py-4 {
@@ -1013,11 +1004,6 @@ video {
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(27 73 151 / var(--tw-text-opacity));
-}
-
-.text-\[\#364354\] {
-  --tw-text-opacity: 1;
-  color: rgb(54 67 84 / var(--tw-text-opacity));
 }
 
 .shadow-md {
@@ -2195,24 +2181,11 @@ html[dir="rtl"] .intro-slider {
   width: 100px;
 }
 
-[dir="ltr"] .ltr\:font-helvetica {
-  font-family: helvetica, sans-serif;
-}
-
 [dir="rtl"] .rtl\:mr-auto {
   margin-right: auto;
 }
 
-[dir="rtl"] .rtl\:font-stc {
-  font-family: stc, sans-serif;
-}
-
 @media (min-width: 1024px) {
-  .lg\:my-\[200px\] {
-    margin-top: 200px;
-    margin-bottom: 200px;
-  }
-
   .lg\:mb-0 {
     margin-bottom: 0px;
   }
@@ -2241,16 +2214,16 @@ html[dir="rtl"] .intro-slider {
     width: 70%;
   }
 
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:gap-12 {
@@ -2261,6 +2234,11 @@ html[dir="rtl"] .intro-slider {
     border-bottom-width: 0px;
   }
 
+  .lg\:py-\[200px\] {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
   .lg\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -2269,11 +2247,6 @@ html[dir="rtl"] .intro-slider {
   .lg\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
-  }
-
-  .lg\:py-\[200px\] {
-    padding-top: 200px;
-    padding-bottom: 200px;
   }
 
   .lg\:pb-0 {
@@ -2294,15 +2267,6 @@ html[dir="rtl"] .intro-slider {
 
   .lg\:pt-28 {
     padding-top: 7rem;
-  }
-
-  .lg\:pt-\[150px\] {
-    padding-top: 150px;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .lg\:text-4xl {
@@ -2333,3 +2297,7 @@ html[dir="rtl"] .intro-slider {
     border-left-width: 1px;
   }
 }
+
+
+
+
