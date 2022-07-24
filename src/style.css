@@ -55,7 +55,7 @@ body {
   @apply px-20 py-10 text-textGray mb-6 ltr:font-helvetica rtl:font-stc;
 }
 .social {
-  @apply py-5 px-20 text-textGray mb-6 ltr:font-helvetica rtl:font-stc
+  @apply py-5  text-textGray mb-6 ltr:font-helvetica rtl:font-stc
 }
 
 .social  p {
@@ -63,7 +63,7 @@ body {
 }
 
 .social .social-link {
-  @apply w-[20px] h-[20px] rounded-full flex justify-center items-center text-white bg-primary p-4
+  @apply w-[20px] h-[20px] rounded-full flex justify-center border-[1px] border-transparent items-center text-white bg-primary p-4 transition-all duration-300 hover:bg-white hover:text-primary hover:border-primary
 }
 
 .header-logo {
@@ -96,7 +96,10 @@ body {
 }
 
 .main-nav .nav-item {
-  @apply text-xl text-textGray
+  @apply text-xl text-primary
+}
+.main-nav .nav-link {
+  @apply  text-primary
 }
 
 .aside {
@@ -129,30 +132,34 @@ body {
 
 /*  start intro */
 .intro {
-       @apply relative z-40 h-[400px] lg:h-screen lg:top-[80px] overflow-hidden
+  @apply relative z-40 h-[600px] pt-[50px] lg:pt-[200px]
 }
 
 .intro-slider {
-  @apply relative  z-40 h-full lg:h-screen  w-full }
+  @apply relative  z-40 h-[350px] w-full rounded-lg shadow-md bg-white
+ }
 
 .intro-img {
-  @apply absolute w-full h-full z-20  after:absolute after:w-full after:h-full after:bg-black/50 after:z-10 after:top-0 after:left-0
-
+  @apply absolute w-full h-full z-20 transition-all 
 }
 
 .intro-img img {
-  @apply absolute w-full h-full after:absolute after:w-full after:h-full after:bg-black/50 after:z-10 after:top-0 after:left-0
+  @apply absolute w-full h-full
 
 }
 
 .intro-content {
-  @apply absolute z-50 w-1/2 top-1/4 lg:top-1/3 rtl:right-[10%] ltr:left-[10%]
+  @apply relative lg:mt-8
 }
 
 .intro-title  {
-  @apply text-2xl lg:text-5xl text-white font-stc lg:pb-8
+  @apply text-5xl lg:text-7xl text-primary font-stc lg:pb-8
 }
 
+.swiper-intro-next ,
+.swiper-intro-prev {
+  @apply h-1 w-10
+}
 
 /* start hero */
 .hero {
@@ -199,9 +206,9 @@ body {
 }
 
 .card-service {
-      background: -webkit-linear-gradient(top, #F8F8F8 0%, rgba(255, 255, 255, 0) 100%);
-    background: linear-gradient(180deg, #F8F8F8 0%, rgba(255, 255, 255, 0) 100%);
-  @apply rounded-xl transition-all ease-in-out  relative overflow-hidden bg-white hover:bg-[#ecf2f6]
+      background: -webkit-linear-gradient(top, #F7F7F7 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, #F7F7F7 0%, rgba(255, 255, 255, 0) 100%);
+  @apply rounded-xl transition-all ease-in-out  relative overflow-hidden bg-[#e3edf6] hover:bg-[#ecf2f6]
 }
 
 .card-img  {
@@ -225,15 +232,15 @@ body {
 }
 
 .card-content .card-link {
-  @apply  text-textGray flex hover:text-primary text-xl
+  @apply  text-textGray flex hover:text-primary text-xl px-4 py-1 border-[1px] border-transparent rounded-full mb-4 flex-row items-center gap-2 transition-all ease-in-out hover:border-primary
 }
 
-.card-content  .line {
-  @apply   transition-all ease-linear  h-[1px] w-[0] bg-primary block opacity-0
+.card-content  .fa-link {
+  @apply   transition-all ease-in-out   hidden
 }
 
-.card-content .card-link:hover + .line {
-  @apply  opacity-100 !w-[50px] text-primary
+.card-content .card-link:hover > .fa-link {
+  @apply  block  text-primary
 }
 
 
@@ -275,37 +282,7 @@ body {
 
 /* start question */
 
-.question {
-   @apply  py-[100px] lg:py-[200px] relative bg-[#ecf2f6] z-40 relative overflow-hidden
-}
 
-.shape-group-6 .shape.shape-1 {
-   @apply top-0 rtl:left-0 rtl:right-auto  z-[33]
-}
-
-.shape-group-6 .shape.shape-2 {
-    @apply top-[110px] rtl:left-0 ltr:right-0 z-[33]
-}
-
-.accordion-content {
-  transition: max-height 0.3s ease-out, padding 0.3s ease;
-}
-
-.accordion-header {
-  @apply cursor-pointer transition flex justify-between px-5 items-center h-16 
-}
-
-.accordion-title {
-  @apply w-[50px] h-[50px] p-2 rounded-lg bg-white flex justify-center items-center
-}
-
-.accordion-content {
-  @apply px-5 pt-8 overflow-hidden max-h-0 hidden
-}
-
-.customer .shape-group-2 .shape.shape-1 {
-    @apply top-[42px] left-0 rotate-y-180
-}
 
 
 .whatsapp-contact {
@@ -316,11 +293,15 @@ body {
   @apply text-3xl text-white
 }
 
+.card-eval {
+  @apply flex flex-col gap-3 justify-center items-center bg-[#f2f5f743] drop-shadow-sm cursor-pointer p-4 rounded-2xl w-[200px] transition-all duration-300 hover:bg-[#f2f5f7]
+}
+
 /* contact */
 
 
 .fixed-header {
-  @apply h-[80px] !fixed w-full bg-white text-textGray z-[10000] top-0 pt-8 shadow-md
+  @apply h-[80px] !fixed w-full bg-white text-primary z-[10000] top-0 pt-8 shadow-md
 }
 
 .fixed-header .action-header_btn {
@@ -338,7 +319,7 @@ body {
 
 
 .fixed-header .nav-link {
-  @apply !text-textGray after:!bg-primary
+  @apply !text-primary after:!bg-primary
 }
 
 
