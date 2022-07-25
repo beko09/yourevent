@@ -153,7 +153,7 @@ body {
 }
 
 .intro-title  {
-  @apply text-5xl lg:text-7xl text-primary font-stc lg:pb-8
+  @apply text-5xl lg:text-8xl text-primary font-stc lg:pb-8 lg:max-w-xl
 }
 
 .swiper-intro-next ,
@@ -206,9 +206,10 @@ body {
 }
 
 .card-service {
-      background: -webkit-linear-gradient(top, #F7F7F7 0%, rgba(255, 255, 255, 0) 100%);
-    background: linear-gradient(180deg, #F7F7F7 0%, rgba(255, 255, 255, 0) 100%);
-  @apply rounded-xl transition-all ease-in-out  relative overflow-hidden bg-[#e3edf6] hover:bg-[#ecf2f6]
+  @apply rounded-xl transition-all ease-in-out duration-300 delay-100 cursor-pointer  relative overflow-hidden bg-[#e3edf6] hover:bg-[#fff]
+}
+.tech-solution .card-service {
+  @apply bg-[#ededed4d]
 }
 
 .card-img  {
@@ -228,7 +229,7 @@ body {
 }
 
 .card-content .card-text {
-  @apply  text-textGray
+  @apply  text-textGray text-justify;
 }
 
 .card-content .card-link {

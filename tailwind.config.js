@@ -31,6 +31,7 @@ module.exports = {
         'primary': '#1B4997',
         'textGray': '#525260',
         'c-title': '#364354',
+        'secondary': '#90298D',
       },
     },
   },
