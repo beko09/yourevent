@@ -1,20 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin')
 
-// Rotate Y utilities
-const rotateY = plugin(function ({ addUtilities }) {
-  addUtilities({
-    '.rotate-y-45': {
-      transform: 'rotateY(45deg)',
-    },
-    '.rotate-y-90': {
-      transform: 'rotateY(90deg)',
-    },
-    '.rotate-y-180': {
-      transform: 'rotateY(180deg)',
-    },
-  })
-})
 module.exports = {
   darkMode: 'class',
   content: ["./public/**/*.{html,js}"],
@@ -35,5 +20,10 @@ module.exports = {
       },
     },
   },
-  plugins: [rotateY],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
+  variants: {
+    lineClamp: ['responsive', 'hover']
+  }
 }

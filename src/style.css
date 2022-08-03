@@ -123,7 +123,7 @@ body {
 }
 
 .main-nav .nav-item .nav-link.active {
-  @apply text-primary 
+  @apply text-secondary 
 }
 
 .main-nav .nav-item >.nav-link.lang {
@@ -184,17 +184,26 @@ body {
   @apply transition-all ease-linear duration-150;
 }
 
+
+
+.shape-1 {
+  @apply  z-[90]  top-0 rtl:right-0 ltr:left-0 rtl:text-right ltr:text-left
+}
+
+.serv .shape-1 {
+  @apply  z-[1]  top-[5%] rtl:right-0 ltr:left-0 rtl:text-right ltr:text-left opacity-30 
+}
+
+.serv .shape-1 img {
+  @apply w-full h-[300px]
+}
+
 .shape {
   @apply absolute -z-[1]
 }
 
-.shape-1 {
-  @apply    top-0 rtl:right-0 ltr:left-0 rtl:text-right ltr:text-left
-}
-
 .shape-2 {
-  @apply top-[145px] rtl:right-0 ltr:left-0 
-
+  @apply top-[145px] rtl:left-0 ltr:right-0 w-[300px];
 }
 
 .hero .social-link {
@@ -206,11 +215,9 @@ body {
 }
 
 .card-service {
-  @apply rounded-xl transition-all ease-in-out duration-300 delay-100 cursor-pointer  relative overflow-hidden bg-[#e3edf6] hover:bg-[#fff]
+  @apply rounded-xl transition-all ease-in-out duration-300 delay-100 cursor-pointer  relative overflow-hidden bg-[#f4f4f44b] hover:bg-[#f4f4f48a] h-full z-[99]
 }
-.tech-solution .card-service {
-  @apply bg-[#ededed4d]
-}
+
 
 .card-img  {
   @apply flex justify-center items-center 
@@ -225,15 +232,15 @@ body {
 }
 
 .card-content .card-title {
-  @apply  text-xl hover:text-primary pt-4 rtl:font-stc ltr:font-helvetica font-bold
+  @apply  text-xl hover:text-primary pt-4 rtl:font-stc ltr:font-helvetica font-bold text-primary
 }
 
 .card-content .card-text {
-  @apply  text-textGray text-justify;
+  @apply  text-textGray text-justify line-clamp-3;
 }
 
 .card-content .card-link {
-  @apply  text-textGray flex hover:text-primary text-xl px-4 py-1 border-[1px] border-transparent rounded-full mb-4 flex-row items-center gap-2 transition-all ease-in-out hover:border-primary
+  @apply  text-textGray flex hover:text-primary text-xl rtl:px-4 py-1 border-[1px] border-transparent rounded-full mb-4 flex-row items-center gap-2 transition-all ease-in-out hover:border-primary ltr:hover:px-4
 }
 
 .card-content  .fa-link {
@@ -284,8 +291,6 @@ body {
 /* start question */
 
 
-
-
 .whatsapp-contact {
   @apply fixed bottom-5 rtl:right-5 ltr:left-5 z-[1000] w-[50px] h-[50px] rounded-full bg-green-500 text-white flex justify-center items-center
 }
@@ -325,7 +330,7 @@ body {
 
 
 .fixed-header .nav-link.active {
-  @apply !text-primary
+  @apply !text-secondary
 }
 
 
@@ -339,18 +344,30 @@ body {
 
 /*  start tech solutions */
 
-.tech-cards .card-service {
-   @apply hover:bg-[#ecf2f6]
+
+
+/*  strat jobs */
+
+.jobs {
+  @apply pt-[150px]  relative
 }
 
-.tech-cards .card-img  {
-  @apply flex justify-start p-8 
+.job-content {
+  @apply flex lg:flex-row flex-col justify-center items-center gap-8 lg:gap-12 mt-[100px]
 }
 
-.tech-cards .card-img  img {
-  @apply w-[100px] h-auto
+.job-link {
+  @apply flex flex-col gap-2 items-center
 }
 
+.job-link img {
+  @apply h-[160px] w-full
+}
 
+.job-link .job-title {
+  @apply text-2xl lg:text-3xl text-primary
+}
 
-
+footer h1 {
+  @apply capitalize;
+}
