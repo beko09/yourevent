@@ -1254,11 +1254,12 @@ html[dir="rtl"] .intro-slider {
 .main-nav {
   position: fixed;
   top: 0px;
+  left: 0px;
   z-index: 1000;
   display: flex;
   height: 100vh;
   width: 70%;
-  --tw-translate-x: -100%;
+  --tw-translate-x: -1000%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   flex-direction: column;
   gap: 2rem;
@@ -1275,12 +1276,10 @@ html[dir="rtl"] .intro-slider {
 }
 
 [dir="ltr"] .main-nav {
-  right: 0px;
   font-family: helvetica, sans-serif;
 }
 
 [dir="rtl"] .main-nav {
-  left: 0px;
   font-family: stc, sans-serif;
 }
 
@@ -1309,7 +1308,7 @@ html[dir="rtl"] .intro-slider {
 }
 
 .close-nav-mobile {
-  --tw-translate-x: -100%;
+  --tw-translate-x: -1000%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 

@@ -79,7 +79,7 @@ body {
 }
 
 .main-nav {
-  @apply flex fixed w-[70%] drop-shadow-md h-screen bg-white lg:bg-transparent z-[1000] flex-col lg:flex-row gap-8 rtl:font-stc ltr:font-helvetica lg:relative p-8 lg:p-0 top-0 ltr:right-0 rtl:left-0 lg:w-auto lg:h-auto lg:left-auto lg:right-auto lg:justify-center lg:drop-shadow-none lg:translate-x-0 -translate-x-full transition-all ease-linear duration-300 overflow-auto lg:overflow-visible
+  @apply flex fixed w-[70%] drop-shadow-md h-screen bg-white lg:bg-transparent z-[1000] flex-col lg:flex-row gap-8 rtl:font-stc ltr:font-helvetica lg:relative p-8 lg:p-0 top-0 left-0 lg:w-auto lg:h-auto lg:left-auto lg:right-auto lg:justify-center lg:drop-shadow-none lg:translate-x-0 -translate-x-[1000%] transition-all ease-linear duration-300 overflow-auto lg:overflow-visible
 }
 
 
@@ -88,7 +88,7 @@ body {
   @apply translate-x-0
 }
 .close-nav-mobile {
-  @apply -translate-x-full
+  @apply -translate-x-[1000%]
 }
 
 .overlay {
