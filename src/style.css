@@ -67,15 +67,15 @@ body {
 }
 
 .header-logo {
-  @apply h-[80px] lg:h-[inherit]
+  @apply h-[80px] lg:h-[150px]
 }
 
 .header-logo a {
-  @apply h-full block
+  @apply h-full block 
 }
 
 .header-logo img {
-  @apply h-[inherit] 
+  @apply h-[inherit] lg:p-4
 }
 
 .main-nav {
