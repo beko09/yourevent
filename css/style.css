@@ -639,10 +639,6 @@ video {
   margin-top: 1rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
 }
@@ -840,10 +836,6 @@ video {
 .\!bg-\[\#6588c4\] {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(101 136 196 / var(--tw-bg-opacity)) !important;
-}
-
-.bg-secondary\/30 {
-  background-color: rgb(144 41 141 / 0.3);
 }
 
 .bg-gradient-to-r {
@@ -1917,15 +1909,15 @@ html[dir="rtl"] .intro-slider {
   z-index: 1000;
   overflow: hidden;
   --tw-bg-opacity: 1;
-  background-color: rgb(27 73 151 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
 @media (min-width: 1024px) {
   .why-yourevent {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
@@ -1946,40 +1938,56 @@ html[dir="rtl"] .intro-slider {
 }
 
 .why-card {
+  border: 10px solid;
+  border-image-slice: 1;
+  position: relative;
+  z-index: 9999;
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+  overflow: hidden;
+  border-width: 2px;
+  border-color: transparent;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 1rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  transition-duration: 700ms;
+  transition-timing-function: linear
 }
 
-.why-number {
-  background: linear-gradient(90deg, #6181aa 0%, rgba(39, 39, 46, 0) 70.31%);
-  height: 80px;
-  width: 80px;
-  border-radius: 9999px;
-  text-align: center;
-  line-height: 80px;
+.why-card::before {
+  position: absolute;
+  z-index: -100;
+  height: 100%;
+  width: 100%;
+  --tw-translate-x: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 73 151 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   transition-property: all;
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-duration: 150ms;
+  content: var(--tw-content);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.why-card:hover > .why-number {
-  --tw-bg-opacity: 1;
-  background-color: rgb(97 129 170 / var(--tw-bg-opacity));
+.why-card:hover::before {
+  content: var(--tw-content);
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .why-title {
   font-size: 1.25rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(27 73 151 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px) {
@@ -1994,12 +2002,17 @@ html[dir="rtl"] .intro-slider {
   font-size: 1.125rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgb(211 212 214 / var(--tw-text-opacity));
+  color: rgb(82 82 96 / var(--tw-text-opacity));
   transition-property: all;
   transition-duration: 150ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.why-card:not(:hover)  {
+  border-image-source: linear-gradient(to left, #EB156E, #00ABCC);
+}
+
+.why-card:hover > .why-title , 
 .why-card:hover > .why-text {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2323,6 +2336,10 @@ footer h1 {
 
   .lg\:pt-28 {
     padding-top: 7rem;
+  }
+
+  .lg\:pt-20 {
+    padding-top: 5rem;
   }
 
   .lg\:text-4xl {
