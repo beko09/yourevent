@@ -267,13 +267,13 @@ body {
   border-width: 5px;
    
   @apply flex flex-col gap-6 justify-center items-center transition-all relative overflow-hidden z-[9999] border-2 border-transparent 
-  bg-white p-4 cursor-pointer  ease-linear duration-700 hover:before:translate-x-0 
+  bg-white px-4 py-16 cursor-pointer  ease-linear duration-700 hover:before:translate-x-0 
    before:absolute before:w-full before:h-full before:bg-primary before:text-white before:transition-all before:-translate-x-[100%] before:-z-[100] before:ease-in-out
 }
 
 
 .why-title {
-  @apply text-xl lg:text-3xl text-primary 
+  @apply text-2xl lg:text-3xl font-bold text-primary 
 }
 
 .why-text {
