@@ -254,7 +254,7 @@ body {
 
 /* start why-yourevent */
 .why-yourevent {
-  @apply py-[100px] lg:py-[200px] bg-primary relative z-[1000] overflow-hidden
+  @apply py-[100px] lg:py-[100px] bg-white relative z-[1000] overflow-hidden
 }
 
 .shape-group-2 .shape-1 {
@@ -262,28 +262,29 @@ body {
 }
 
 .why-card {
-  @apply flex flex-col gap-6 justify-center items-center transition-all
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+   
+  @apply flex flex-col gap-6 justify-center items-center transition-all relative overflow-hidden z-[9999] border-2 border-transparent 
+  bg-white p-4 cursor-pointer  ease-linear duration-700 hover:before:translate-x-0 
+   before:absolute before:w-full before:h-full before:bg-primary before:text-white before:transition-all before:-translate-x-[100%] before:-z-[100] before:ease-in-out
 }
 
 
-
-.why-number {
-      background: -webkit-linear-gradient(90deg, #6181aa 0%, rgba(39, 39, 46, 0) 70.31%);
-    background: linear-gradient(90deg, #6181aa 0%, rgba(39, 39, 46, 0) 70.31%);
-  @apply h-[80px] w-[80px] rounded-full text-center leading-[80px] transition-all text-white ease-in-out duration-300
-}
-
-.why-card:hover > .why-number {
-  @apply bg-[#6181aa]
-}
 .why-title {
-  @apply text-xl lg:text-3xl text-white 
+  @apply text-xl lg:text-3xl text-primary 
 }
 
 .why-text {
-  @apply text-lg text-[#d3d4d6] text-center transition-all ease-in-out
+  @apply text-lg text-textGray text-center transition-all ease-in-out
 }
 
+.why-card:not(:hover)  {
+  border-image-source: linear-gradient(to left, #EB156E, #00ABCC);
+}
+
+.why-card:hover > .why-title ,
 .why-card:hover > .why-text {
   @apply text-white
 }
