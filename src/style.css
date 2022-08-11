@@ -232,15 +232,20 @@ body {
 }
 
 .card-content .card-title {
-  @apply  text-xl hover:text-primary pt-4 rtl:font-stc ltr:font-helvetica font-bold text-primary
+  @apply  text-xl hover:text-primary pt-4 rtl:font-stc ltr:font-helvetica font-bold text-primary line-clamp-1 transition-all ease-in-out duration-700
 }
 
 .card-content .card-text {
-  @apply  text-textGray text-justify line-clamp-3;
+  @apply  text-textGray text-justify transition-all ease-in-out duration-700 line-clamp-2 ;
+}
+
+.card-service:hover .card-text, 
+.card-service:hover .card-title, {
+  @apply line-clamp-none
 }
 
 .card-content .card-link {
-  @apply  text-textGray flex hover:text-primary text-xl rtl:px-4 py-1 border-[1px] border-transparent rounded-full mb-4 flex-row items-center gap-2 transition-all ease-in-out hover:border-primary ltr:hover:px-4
+  @apply  text-textGray flex hover:text-primary text-xl  py-1 border-[1px] border-transparent rounded-full mb-4 flex-row items-center gap-2 transition-all ease-in-out hover:border-primary hover:px-4
 }
 
 .card-content  .fa-link {
@@ -371,4 +376,12 @@ body {
 
 footer h1 {
   @apply capitalize;
+}
+
+iframe {
+  @apply flex flex-col gap-4 p-8 bg-white rounded-lg drop-shadow-xl text-textGray
+}
+
+iframe body > div  {
+  @apply bg-white !h-auto
 }
