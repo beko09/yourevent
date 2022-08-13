@@ -379,9 +379,17 @@ footer h1 {
 }
 
 iframe {
-  @apply flex flex-col gap-4 p-8 bg-white rounded-lg drop-shadow-xl text-textGray
+  @apply flex flex-col gap-4 lg:p-8 bg-white rounded-lg drop-shadow-xl text-textGray h-full w-full lg:w-[600px] mx-auto
 }
 
-iframe body > div  {
-  @apply bg-white !h-auto
+.contact-form    {
+  @apply !h-[1600px]
+}
+
+.job-form    {
+  @apply !h-[1600px]
+}
+
+.contact-form > input   {
+   @apply text-textGray  text-lg ring-1 ring-gray-300 transition-all duration-300  rounded-md w-full p-2 focus:outline-none focus:ring-0 focus:drop-shadow-xl hover:ring-0 hover:drop-shadow-xl
 }
