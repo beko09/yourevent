@@ -13,9 +13,9 @@ module.exports = {
         'contact': "url('../assets/img/contact.jpg')",
       },
       colors: {
-        'primary': '#3067bd',
-        'textGray': '#a6a7aa',
-        'c-title': '#3d0491',
+        'primary': '#1B4997',
+        'textGray': '#525260',
+        'c-title': '#364354',
         'secondary': '#90298D',
       },
     },

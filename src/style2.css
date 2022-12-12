@@ -1,0 +1,395 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "stc";
+  src: url("../assets/fonts/STC-Regular.ttf");
+}
+
+@font-face {
+  font-family: "helvetica";
+  src: url("../assets/fonts/Helvetica.ttf");
+}
+
+
+html {
+  @apply accent-primary rtl:font-stc ltr:font-helvetica scroll-smooth;
+}
+
+html[dir="rtl"] body {
+  @apply font-stc 
+}
+
+html[dir="ltr"] body {
+  @apply font-helvetica
+}
+html[dir="rtl"] .intro-slider {
+  direction: rtl;
+}
+
+body {
+   @apply  rtl:font-stc ltr:font-helvetica ;
+}
+
+/* start header */
+
+.header {
+  @apply p-6 lg:px-8 relative bg-white flex  overflow-hidden  lg:py-10 flex-row justify-between items-center lg:absolute lg:w-full lg:z-[9999]  transition-all duration-300 w-full h-[60px]  ;
+}
+
+
+
+.action-header_btn {
+  @apply bg-white w-14 h-14 rounded-full p-5 flex flex-col items-start justify-center  gap-1
+  [&>span:first-child]:hover:w-[10px] 
+  [&>span:last-child]:hover:w-[20px]; 
+}
+
+.action-header_btn>span {
+  @apply h-[2px] w-[20px] bg-[#364354]  rounded-[10px] block transition-all [&:last-child]:w-[10px];
+}
+
+.action-header__content  {
+  @apply px-20 py-10 text-textGray mb-6 ltr:font-helvetica rtl:font-stc;
+}
+.social {
+  @apply py-5  text-textGray mb-6 ltr:font-helvetica rtl:font-stc
+}
+
+.social  p {
+  @apply py-4 ltr:font-helvetica rtl:font-stc
+}
+
+.social .social-link {
+  @apply w-[20px] h-[20px] rounded-full flex justify-center border-[1px] border-transparent items-center text-white bg-primary p-4 transition-all duration-300 hover:bg-white hover:text-primary hover:border-primary
+}
+
+.header-logo {
+  @apply h-[80px] lg:h-[150px]
+}
+
+.header-logo a {
+  @apply h-full block 
+}
+
+.header-logo img {
+  @apply h-[inherit] lg:p-8
+}
+
+.main-nav {
+  @apply flex fixed w-[70%] drop-shadow-md h-screen bg-white lg:bg-transparent z-[1000] flex-col lg:flex-row gap-8 rtl:font-stc ltr:font-helvetica lg:relative p-8 lg:p-0 top-0 left-0 lg:w-auto lg:h-auto lg:left-auto lg:right-auto lg:justify-center lg:drop-shadow-none lg:translate-x-0 -translate-x-[1000%] transition-all ease-linear duration-300 overflow-auto lg:overflow-visible
+}
+
+
+
+.open-mobile {
+  @apply translate-x-0
+}
+.close-nav-mobile {
+  @apply -translate-x-[1000%]
+}
+
+.overlay {
+  @apply block lg:hidden fixed bg-slate-900/50  h-full w-full top-0 left-0 z-[100] backdrop:bg-slate-900 backdrop:backdrop-blur-md transition-all ease-in-out
+}
+
+.main-nav .nav-item {
+  @apply text-xl text-primary
+}
+.main-nav .nav-link {
+  @apply  text-primary
+}
+
+.aside {
+  @apply w-[40vw] bg-white fixed shadow-xl top-0 h-screen ltr:left-0 rtl:right-0 z-[1001] rtl:translate-x-full ltr:-translate-x-full transition-all ease-linear duration-300
+}
+
+.overlay-aside {
+  @apply hidden lg:block fixed bg-slate-900/50  h-full w-full top-0 left-0 z-[1001] backdrop:bg-slate-900 backdrop:backdrop-blur-md transition-all ease-in-out
+}
+
+.c-open-aside {
+  @apply rtl:translate-x-0 ltr:translate-x-0
+}
+.c-close-aside {
+  @apply rtl:translate-x-full ltr:-translate-x-full
+}
+
+.main-nav .nav-item .nav-link:not(.lang,.close) {
+  @apply relative transition-all  ease-linear after:h-[2px] after:w-0 after:ltr:left-0 after:rtl:right-0 after:bg-primary after:bottom-0 after:opacity-0  after:content-[''] after:absolute
+   hover:after:w-full hover:after:opacity-100 after:transition-[0.5s] after:ease-linear 
+}
+
+.main-nav .nav-item .nav-link.active {
+  @apply text-secondary 
+}
+
+.main-nav .nav-item >.nav-link.lang {
+  @apply bg-primary text-white transition-all ease-in-out duration-150 rounded-full  text-[13px] p-1 border-[1px] border-transparent hover:bg-transparent hover:border-primary hover:text-primary
+}
+
+/*  start intro */
+.intro {
+  @apply relative z-40 h-[600px] pt-[50px] lg:pt-[200px]
+}
+
+.intro-slider {
+  @apply relative  z-40 h-[350px] w-full rounded-lg shadow-md bg-white
+ }
+
+.intro-img {
+  @apply absolute w-full h-full z-20 transition-all 
+}
+
+.intro-img img {
+  @apply absolute w-full h-full
+
+}
+
+.intro-content {
+  @apply relative lg:mt-8
+}
+
+.intro-title  {
+  @apply text-5xl lg:text-8xl text-primary font-stc lg:pb-8 lg:max-w-xl
+}
+
+.swiper-intro-next ,
+.swiper-intro-prev {
+  @apply h-1 w-10
+}
+
+/* start hero */
+.hero {
+      background: -webkit-linear-gradient(left, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
+    background: linear-gradient(90deg, #ECF2F6 0%, rgba(236, 242, 246, 0) 70.31%);
+       @apply lg:pt-[250px] lg:pb-[100px] py-[50px] relative 
+}
+
+.main-btn {
+  @apply max-w-[160px] bg-primary text-white px-3 py-3 text-center rounded-2xl z-20  relative overflow-hidden flex justify-center items-center before:content-[''] before:w-full before:h-full  before:-translate-x-full before:absolute before:bg-white/10 before:z-[10]  hover:before:translate-x-0 before:transition-transform before:duration-300 before:ease-linear
+}
+
+.back-to-top {
+  @apply fixed scale-50 -bottom-5 rtl:left-8 ltr:right-8 z-[1000] rounded-full bg-primary cursor-pointer w-[54px] h-[54px] text-white transition-all  flex justify-center items-center [&>i]:hover:mb-2 ease-linear duration-150 opacity-0 shadow-lg ;
+}
+
+.show-back {
+  @apply bottom-5 opacity-100 scale-100
+}
+
+.back-to-top i {
+  @apply transition-all ease-linear duration-150;
+}
+
+
+
+.shape-1 {
+  @apply  z-[90]  top-0 rtl:right-0 ltr:left-0 rtl:text-right ltr:text-left
+}
+
+.serv .shape-1 {
+  @apply  z-[1]  top-[5%] rtl:right-0 ltr:left-0 rtl:text-right ltr:text-left opacity-30 
+}
+
+.serv .shape-1 img {
+  @apply w-full h-[300px]
+}
+
+.shape {
+  @apply absolute -z-[1]
+}
+
+.shape-2 {
+  @apply top-[145px] rtl:left-0 ltr:right-0 w-[300px];
+}
+
+.hero .social-link {
+  @apply  text-[#99a1aa] hover:text-primary transition-all ease-in-out text-xl
+}
+
+.service-main {
+  @apply relative overflow-hidden py-[100px] lg:pt-[200px];
+}
+
+.card-service {
+  @apply rounded-xl transition-all ease-in-out duration-300 delay-100 cursor-pointer  relative overflow-hidden bg-[#f4f4f44b] hover:bg-[#f4f4f48a] h-full z-[99]
+}
+
+
+.card-img  {
+  @apply flex justify-center items-center 
+}
+
+.card-img img {
+  @apply w-[200px] h-[180px]
+}
+
+.card-content {
+  @apply  px-4 flex flex-col gap-4
+}
+
+.card-content .card-title {
+  @apply  text-xl hover:text-primary pt-4 rtl:font-stc ltr:font-helvetica font-bold text-primary line-clamp-1 transition-all ease-in-out duration-700
+}
+
+.card-content .card-text {
+  @apply  text-textGray text-justify transition-all ease-in-out duration-700 line-clamp-2 ;
+}
+
+.card-service:hover .card-text, 
+.card-service:hover .card-title, {
+  @apply line-clamp-none
+}
+
+.card-content .card-link {
+  @apply  text-textGray flex hover:text-primary text-xl  py-1 border-[1px] border-transparent rounded-full mb-4 flex-row items-center gap-2 transition-all ease-in-out hover:border-primary hover:px-4
+}
+
+.card-content  .fa-link {
+  @apply   transition-all ease-in-out   hidden
+}
+
+.card-content .card-link:hover > .fa-link {
+  @apply  block  text-primary
+}
+
+
+/* start why-yourevent */
+.why-yourevent {
+  @apply py-[100px] lg:py-[100px] bg-white relative z-[1000] overflow-hidden
+}
+
+.shape-group-2 .shape-1 {
+  @apply top-0 scale-90 rtl:right-[-520px] ltr:left-[-520px] -z-10
+}
+
+.why-card {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+   
+  @apply flex flex-col gap-6 justify-center items-center transition-all relative overflow-hidden z-[9999] border-2 border-transparent 
+  bg-white px-4 py-16 cursor-pointer  ease-linear duration-700 hover:before:translate-x-0 
+   before:absolute before:w-full before:h-full before:bg-primary before:text-white before:transition-all before:-translate-x-[100%] before:-z-[100] before:ease-in-out
+}
+
+
+.why-title {
+  @apply text-2xl lg:text-3xl font-bold text-primary 
+}
+
+.why-text {
+  @apply text-lg text-textGray text-center transition-all ease-in-out
+}
+
+.why-card:not(:hover)  {
+  border-image-source: linear-gradient(to left, #EB156E, #00ABCC);
+}
+
+.why-card:hover > .why-title ,
+.why-card:hover > .why-text {
+  @apply text-white
+}
+
+/* start question */
+
+
+.whatsapp-contact {
+  @apply fixed bottom-5 rtl:right-5 ltr:left-5 z-[1000] w-[50px] h-[50px] rounded-full bg-green-500 text-white flex justify-center items-center
+}
+
+.whatsapp-contact i {
+  @apply text-3xl text-white
+}
+
+.card-eval {
+  @apply flex flex-col gap-3 justify-center items-center bg-[#f2f5f743] drop-shadow-sm cursor-pointer p-4 rounded-2xl w-[200px] transition-all duration-300 hover:bg-[#f2f5f7]
+}
+
+/* contact */
+
+
+.fixed-header {
+  @apply h-[80px] !fixed w-full bg-white text-primary z-[10000] top-0 pt-8 shadow-md
+}
+
+.fixed-header .action-header_btn {
+  @apply bg-primary
+}
+
+.fixed-header .action-header_btn span {
+  @apply bg-white
+}
+
+
+.fixed-header .nav-link.lang {
+  @apply !text-white hover:!text-textGray
+}
+
+
+.fixed-header .nav-link {
+  @apply !text-primary after:!bg-primary
+}
+
+
+.fixed-header .nav-link.active {
+  @apply !text-secondary
+}
+
+
+
+.label-form {
+  @apply  text-textGray block mb-2
+}
+.input-form {
+  @apply text-textGray  text-lg ring-1 ring-gray-300 transition-all duration-300  rounded-md w-full p-2 focus:outline-none focus:ring-0 focus:drop-shadow-xl hover:ring-0 hover:drop-shadow-xl
+}
+
+/*  start tech solutions */
+
+
+
+/*  strat jobs */
+
+.jobs {
+  @apply pt-[150px]  relative
+}
+
+.job-content {
+  @apply flex lg:flex-row flex-col justify-center items-center gap-8 lg:gap-12 mt-[100px]
+}
+
+.job-link {
+  @apply flex flex-col gap-2 items-center
+}
+
+.job-link img {
+  @apply h-[160px] w-full
+}
+
+.job-link .job-title {
+  @apply text-2xl lg:text-3xl text-primary
+}
+
+footer h1 {
+  @apply capitalize;
+}
+
+iframe {
+  @apply flex flex-col gap-4 lg:p-8 bg-white rounded-lg drop-shadow-xl text-textGray h-full w-full lg:w-[600px] mx-auto
+}
+
+.contact-form    {
+  @apply !h-[1600px]
+}
+
+.job-form    {
+  @apply !h-[1600px]
+}
+
+.contact-form > input   {
+   @apply text-textGray  text-lg ring-1 ring-gray-300 transition-all duration-300  rounded-md w-full p-2 focus:outline-none focus:ring-0 focus:drop-shadow-xl hover:ring-0 hover:drop-shadow-xl
+}

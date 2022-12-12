@@ -4,7 +4,7 @@
   "description": "yourevent project",
   "main": "public/index.html",
   "scripts": {
-    "dev": "tailwindcss -i src/style.css -o public/css/style.css --watch",
+    "dev": "tailwindcss -i src/style2.css -o public/css/market.css --watch",
     "prod": "tailwindcss -i src/style.css -o public/css/style.css --minify",
     "build": "postcss src/style.css -o public/css/style.css --watch"
   },
