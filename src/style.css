@@ -236,7 +236,7 @@ body {
 }
 
 .card-content .card-text {
-  @apply  text-textGray text-justify transition-all ease-in-out duration-700 line-clamp-2 ;
+  @apply  text-textGray  transition-all ease-in-out duration-700 line-clamp-2 ;
 }
 
 .card-service:hover .card-text, 
@@ -392,4 +392,16 @@ iframe {
 
 .contact-form > input   {
    @apply text-textGray  text-lg ring-1 ring-gray-300 transition-all duration-300  rounded-md w-full p-2 focus:outline-none focus:ring-0 focus:drop-shadow-xl hover:ring-0 hover:drop-shadow-xl
+}
+
+.clients {
+  @apply flex items-center flex-row
+}
+
+.client-img {
+  @apply h-[100px]
+}
+
+.client-img img {
+  @apply h-[inherit] max-w-full
 }
