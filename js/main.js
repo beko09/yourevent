@@ -6,7 +6,8 @@ window.onload = function () {
   const menu = selectElement(".menu-mobile");
   const over = selectElement(".over");
 
-  if (openNav) {
+  if (openNav)
+  {
     openNav.onclick = () => {
       menu.classList.add("open-mobile")
       over.classList.add("overlay")
@@ -36,10 +37,12 @@ window.onload = function () {
   window.onscroll = function () { scrollFunction() };
 
   function scrollFunction() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)
+    {
       backToTop.classList.add('show-back');
       header.classList.add('fixed-header');
-    } else {
+    } else
+    {
       backToTop.classList.remove('show-back');
       header.classList.remove('fixed-header');
     }
@@ -105,6 +108,37 @@ window.onload = function () {
     navigation: {
       nextEl: ".swiper-intro-next",
       prevEl: ".swiper-intro-prev",
+    },
+  });
+
+  //  sliders
+  const clients = new Swiper(".clients", {
+    slidesPerView: 4,
+    loop: true,
+    lazy: true,
+    grabCursor: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        centeredSlides: true,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        centeredSlides: true,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        centeredSlides: true,
+      },
     },
   });
 

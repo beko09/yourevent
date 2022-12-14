@@ -1835,7 +1835,6 @@ html[dir="rtl"] .intro-slider {
 }
 
 .card-content .card-text {
-  text-align: justify;
   --tw-text-opacity: 1;
   color: rgb(166 167 170 / var(--tw-text-opacity));
   transition-property: all;
@@ -2288,6 +2287,21 @@ iframe {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.clients {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.client-img {
+  height: 100px;
+}
+
+.client-img img {
+  height: inherit;
+  max-width: 100%;
 }
 
 [dir="ltr"] .ltr\:font-helvetica {
